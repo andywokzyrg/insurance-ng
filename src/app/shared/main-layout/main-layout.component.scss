@@ -42,8 +42,6 @@
         padding: 80px 140px;
         background-color: #4A607A;
 
-
-
         .column {
             display: flex;
             flex-direction: column;
@@ -89,8 +87,25 @@
         }
     }
 
-    .sub-footer {
+    .line {
+        border: 1px solid #9C9C9C;
+        width: 100%;
+    }
 
+    .sub-footer {
+        background-color: #4A607A;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .small-grey-text {
+            font-size: 14px;
+            color: #9C9C9C;
+            max-width: 1100px;
+            text-align: center;
+            margin: 35px 0;
+        }
     }
 }
 
