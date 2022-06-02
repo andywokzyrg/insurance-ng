@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="closed exp-panel" (click)="toggle()">
+        <ng-content select=".trigger-button" class="button-text"></ng-content>
+        <img *ngIf="isPanelOpened" src="../../../../assets/arrow-exp-up.png" width="12" height="7.4">
+        <img *ngIf="!isPanelOpened" src="assets/arrow-exp-down.png" width="12" height="7.4">
+    </div>
+
+    <div class="opened exp-panel" *ngIf="isPanelOpened">
+        <ng-content select=".opened-panel" class="opened-panel"></ng-content>
+    </div>
+</div>

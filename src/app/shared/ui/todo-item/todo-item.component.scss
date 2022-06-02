@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+    height: 165px;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    border: 1px solid #4A607A;
+    box-shadow: 0 2px 18px rgba(41, 41, 41, 0.1);
+    border-radius: 20px;
+}
