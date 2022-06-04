@@ -26,6 +26,7 @@
             color: #939CA6;
             margin-top: 24px;
             margin-bottom: 90px;
+            text-align: left;
         }
     }
 }
@@ -132,20 +133,55 @@
         margin-top: 50px;
         justify-content: space-between;
         gap: 50px;
+    }
 
-        .text {
-            font-family: 'SF Pro Display', sans-serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            text-align: center;
-        }
+    &.button {
+        margin-top: 50px;
     }
 }
 
-.popup-block {
+.text {
+    font-family: 'SF Pro Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
 
+    &.popup {
+        text-align: left;
+    }
+
+    &.link {
+        text-decoration: underline;
+        color: #ddd0a4;
+    }
+
+    &.details {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.popup-double {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.popup-block {
+    margin: 40px 170px;
+    display: flex;
+    justify-content: flex-start;
+
+    &.right {
+        justify-content: flex-end;
+    }
 }
 
 .phone-number {
@@ -153,3 +189,5 @@
     font-style: normal;
     font-weight: 300;
 }
+
+

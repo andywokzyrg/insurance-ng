@@ -1,6 +1,15 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
     box-shadow: 0 0 18px rgba(34, 60, 80, 0.1);
     border-radius: 13px;
     width: fit-content;
     padding: 35px;
+
+    &.double {
+        flex-direction: row;
+        gap: 70px;
+    }
 }

@@ -48,11 +48,13 @@
     </div>
 </div>
 
+
 <h1 class="h1 questions">Часто задаваемые вопросы </h1>
 
 <div class="questions-block">
     <app-exp-panel class="exp-panel">
-        <p class="trigger-button">Сколько раз в год можно обратиться к терапевту или педиатру по данной программе?</p>
+        <p class="trigger-button">Сколько раз в год можно обратиться к терапевту или педиатру по данной
+            программе?</p>
         <p class="opened-panel">Количество обращений не ограничено в течение всего срока действия договора.</p>
     </app-exp-panel>
 
@@ -72,7 +74,8 @@
     </app-exp-panel>
 
     <app-exp-panel class="exp-panel">
-        <p class="trigger-button">Как получить консультацию педиатра, если возраст ребенка меньше 1 года, и оформить на
+        <p class="trigger-button">Как получить консультацию педиатра, если возраст ребенка меньше 1 года, и оформить
+            на
             ребенка программу нельзя? </p>
         <p class="opened-panel">Количество обращений не ограничено в течение всего срока действия договора.</p>
     </app-exp-panel>
@@ -82,33 +85,67 @@
 
 <div class="container">
     <div class="todo-block">
-        <app-todo-item>
+        <app-todo-item [isActive]="currentPopup === Popups.call" class="todo" (click)="showCallPopup()">
             <img src="assets/phone-call.png" width="50" height="50">
             <p class="text">Позвоните нам</p>
         </app-todo-item>
 
-        <app-todo-item>
+        <app-todo-item [isActive]="currentPopup === Popups.docs" class="todo" (click)="showDocsPopup()">
             <img src="assets/docs.png" width="45" height="50">
             <p class="text">Заполните <br> заявление</p>
         </app-todo-item>
 
-        <app-todo-item>
+        <app-todo-item [isActive]="currentPopup === Popups.status" class="todo" (click)="showStatusPopup()">
             <img src="assets/status.png" width="50" height="50">
             <p class="text">Узнайте статус решения вопроса</p>
         </app-todo-item>
 
-        <app-todo-item>
+        <app-todo-item [isActive]="currentPopup === Popups.archive" class="todo" (click)="showArchivePopup()">
             <img src="assets/archive.png" width="50" height="50">
             <p class="text">Полный архив всех условий</p>
         </app-todo-item>
     </div>
 </div>
 
-<div class="popup-block">
-    <app-popup class="popup">
-        <p class="text">Наш номер:</p>
+<div class="popup-block" [ngClass]="{right: isRightPopupActive}">
+    <app-popup class="popup" *ngIf="currentPopup === Popups.call">
+        <p class="popup text">Наш номер:</p>
         <p class="phone-number">+7 495 967 13 01</p>
+    </app-popup>
+
+    <app-popup [isDouble]="true" class="popup" *ngIf="currentPopup === Popups.docs">
+        <div class="popup-double">
+            <p><strong>Заполните заявление и подготовьте <br> необходимые документы.</strong></p>
+            <p>Направьте документы в Страховую компанию <br> удобным для Вас способом:</p>
+            <p>&bull; через <a class="link text">Личный кабинет</a></p>
+            <p>&bull; письмом по адресу: 125252, г. Москва, а/я 28</p>
+        </div>
+        <div class="popup-double">
+            <p><strong>Список необходимых документов для <br> заключения договора:</strong></p>
+            <p>&bull; паспорт</p>
+            <p>&bull; заявление на страхование</p>
+            <p>&bull; иные документы - по запросу компании</p>
+        </div>
+    </app-popup>
+
+    <app-popup class="popup" *ngIf="currentPopup === Popups.status">
+        <p class="popup text">Узнать статус решения своего вопроса Вы <br> можете любым удобным для Вас способом:</p>
+        <p>&bull; через <a href="" class="link text">Личный кабинет</a></p>
+        <p>&bull; позвонить по номеру <a href="" class="link text">+7 495 967 13 01</a></p>
+    </app-popup>
+
+    <app-popup class="popup" *ngIf="currentPopup === Popups.archive">
+        <app-button [isNarrow]="true">
+            <span>СКАЧАТЬ ПОЛНЫЙ АРХИВ <br> ВСЕХ УСЛОВИЙ</span>
+            <img src="assets/download.png" alt="" height="18" width="18">
+        </app-button>
     </app-popup>
 </div>
 
+<h1 class="h1">Посмотреть полную <br> презентацию продукта</h1>
+<div class="button container">
+    <app-button>СКАЧАТЬ PDF</app-button>
+</div>
 
+<h1 class="h1">Уточнить детали</h1>
+<p class="details text">Если вы не нашли ответа на свой вопрос, заполните <br> эту форму, а мы как можно быстрее ответим вам.</p>
