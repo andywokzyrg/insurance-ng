@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.input-file {
+    display: none;
+}
+
+.input-file-button {
+    cursor: pointer;
+    padding: 15px 55px;
+    background: #FFFFFF;
+    border: 1px solid #4A607A;
+    box-shadow: 0 2px 18px rgba(41, 41, 41, 0.1);
+    border-radius: 6px;
+}

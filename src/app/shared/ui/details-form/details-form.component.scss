@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 35px;
+    box-shadow: 0 2px 18px rgba(41, 41, 41, 0.1);
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 45px;
+
+    &.last-line {
+        margin-top: 0;
+    }
+}
+
+.button {
+    flex-basis: 30%;
+}
+
+.line {
+    display: flex;
+    gap: 40px;
+}
+
+.checkbox-text {
+    color: rgba(147, 156, 166, 1);
+}
+
+.file-upload-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-line {
+    display: flex;
+    align-items: center;
+}
+

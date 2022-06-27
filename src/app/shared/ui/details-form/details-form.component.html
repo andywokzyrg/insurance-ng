@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="sub-container">
+        <form class="form" >
+            <div class="input-item">
+                <label for="name">ФИО*</label>
+                <app-input placeholder="Иванов Иван Иванович" class="input" type="text" name="name"
+                           id="name"></app-input>
+            </div>
+
+            <div class="input-item">
+                <label for="phone">Номер телефона*</label>
+                <app-input placeholder="+7-(495)-453-33-41" class="input" type="text" name="phone"
+                           id="phone"></app-input>
+            </div>
+
+            <div class="input-item">
+                <label for="email">Email*</label>
+                <app-input placeholder="delolive@mail.ru" class="input" [type]="'text'" name="email" id="email"></app-input>
+            </div>
+
+            <div class="input-item">
+                <label for="region">Регион*</label>
+                <app-select id="region">
+                    <option>Санкт-Петербург</option>
+                    <option>Москва</option>
+                </app-select>
+            </div>
+        </form>
+
+        <div class="buttons">
+            <app-button class="button" [noBorder]="true">Очистить</app-button>
+            <app-button class="button">Далее</app-button>
+        </div>
+    </div>
+
+    <div class="sub-container">
+        <form class="form">
+            <div class="line">
+                <div class="input-item">
+                    <label for="product-name">Наименование страхового продукта</label>
+                    <app-select id="product-name">
+                        <option>Защита+</option>
+                        <option>Нападение-</option>
+                    </app-select>
+                </div>
+
+                <div class="input-item">
+                    <label for="policy-number">Email*</label>
+                    <app-input placeholder="123456789" class="input" type="text" name="email"
+                               id="policy-number" [width]="230"></app-input>
+                </div>
+            </div>
+
+            <div class="input-item">
+                <label for="theme">Выберите тему</label>
+                <app-select id="theme">
+                    <option>Расторжение страхового полиса</option>
+                    <option>Оформление свидетельства о смерти</option>
+                </app-select>
+            </div>
+            <app-textarea [placeholder]="'Здравствуйте!'">Ваше сообщение</app-textarea>
+            <div class="file-upload-line">
+                <app-file-button>Выбрать файл</app-file-button>
+                <app-checkbox>Я принимаю&nbsp;<a href="" class="checkbox-text">условия передачи информации</a>
+                </app-checkbox>
+            </div>
+            <div class="last-line">
+                <div>
+                    <span class="last-line-text">Файл не выбран<br><br>JPG, GIF или PNG. Максимальный размер 1 мб.</span>
+                </div>
+                <div class="last-line buttons">
+                    <app-button class="button" [noBorder]="true">Очистить</app-button>
+                    <app-button class="button">Отправить</app-button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>

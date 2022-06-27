@@ -1,0 +1,16 @@
+textarea {
+    background: #FFFFFF;
+    box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15), -2px -2px 5px rgba(20, 29, 61, 0.15);
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: 75px;
+    padding: 17px 24px;
+    resize: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

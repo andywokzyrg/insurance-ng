@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
     @Input() isNarrow: boolean = false;
+    @Input() noBorder: boolean = false;
 
     constructor() {
     }

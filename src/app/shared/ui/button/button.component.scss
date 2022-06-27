@@ -9,9 +9,15 @@ button {
     border: 1px solid #4A607A;
     box-shadow: 0 2px 18px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
+    cursor: pointer;
 
     &.narrow {
         padding: 15px 30px;
+    }
+
+    &.noBorder {
+        border: none;
+        box-shadow: none;
     }
 }
 
